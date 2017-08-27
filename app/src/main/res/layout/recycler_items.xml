@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    card_view:cardCornerRadius="4dp">
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,10 +18,10 @@
             android:id="@+id/StockNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16px"
+            android:layout_marginLeft="8dp"
             android:padding="16px"
             android:text="STOCK Name"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -36,14 +37,16 @@
                 android:layout_marginRight="16px"
                 android:padding="8px"
                 android:text="Rate:"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/StockPriceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8px"
-                android:text="25" />
+                android:text="25"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -60,14 +63,16 @@
                 android:layout_marginRight="16px"
                 android:padding="8px"
                 android:text="NAV:"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/StockNavTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8px"
-                android:text="50" />
+                android:text="50"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -84,20 +89,23 @@
                 android:layout_marginRight="16px"
                 android:padding="8px"
                 android:text="Change:"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/StockChangeTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8px"
-                android:text="0.5" />
+                android:text="0.5"
+                android:textSize="14sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:orientation="horizontal">
 
             <TextView
@@ -108,17 +116,18 @@
                 android:layout_marginRight="16px"
                 android:padding="8px"
                 android:text="% Change:"
-                android:textStyle="bold"/>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/StockChangePercentageTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8px"
-                android:text="0.2%" />
+                android:text="0.2%"
+                android:textSize="14sp" />
 
         </LinearLayout>
-
 
     </LinearLayout>
 
