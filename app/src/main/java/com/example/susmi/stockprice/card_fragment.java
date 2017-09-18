@@ -29,6 +29,12 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
+import org.jsoup.nodes.Element;
+
 /**
  * Created by susmi on 24-Aug-17.
  */
@@ -57,7 +63,8 @@ public class card_fragment extends android.support.v4.app.Fragment {
     public String loadJsonInput(){
         String jsonInputString = null;
         try{
-            InputStream inputStream = getActivity().getAssets().open("input.json");
+            //InputStream inputStream = getActivity().getAssets().open("input.json");
+            InputStream inputStream = getActivity().getAssets().open("modified_input.json");
             int size = inputStream.available();
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
@@ -243,6 +250,7 @@ public class card_fragment extends android.support.v4.app.Fragment {
                 try{
                     StringBuilder outputString = new StringBuilder();
                     String output;
+                    String price = "null", change = "null", change_percent = "null";
 
                     JSONObject eachStockObject = stockArray.getJSONObject(i);
 
@@ -259,7 +267,7 @@ public class card_fragment extends android.support.v4.app.Fragment {
                     HashMap<String, String> result = new HashMap<String, String>();
 
                     try{
-                        URL url = new URL(eachStockUrl);
+                        /*URL url = new URL(eachStockUrl);
                         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                         conn.setRequestMethod("GET");
 
@@ -274,7 +282,30 @@ public class card_fragment extends android.support.v4.app.Fragment {
                             outputString.append(output);
                         }
 
-                        Log.d("Output String :: ", "" + outputString.toString());
+                        Log.d("Output String :: ", "" + outputString.toString());*/
+
+                        //Connect ot the website
+                        Document document = Jsoup.connect(eachStockUrl).get();
+
+                        //Using elements to get the class data
+                        Elements span = document.select("span[class=pr]");
+                        //Elements chg = document.select("span[class=id-price-change nwp] span[class=ch bld]");
+                        Elements main_change_span = document.select("span[class=ch bld]");
+                        Element change_span = main_change_span.first();
+
+
+                        price = span.html();
+                        change = change_span.child(0).html();
+                        change_percent = change_span.child(1).html();
+
+                        //String change = chg.html();
+                        Log.d("Scrape :: ", span.toString());
+                        Log.d("Output scrape 1:: ", price);
+                        Log.d("Output scrape 3:: ", change);
+                        //Log.d("Output scrape :: ", change_percent);
+                        Log.d("Output scrape 4:: ", change_percent.substring(1,6));
+
+
 
                     }catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -282,10 +313,15 @@ public class card_fragment extends android.support.v4.app.Fragment {
                         e.printStackTrace();
                     }
 
-                    String requiredOutput = outputString.toString().substring(3);
-                    Log.d("Required String :: ", "" + requiredOutput);
+                    //String requiredOutput = outputString.toString().substring(3);
+                    //Log.d("Required String :: ", "" + requiredOutput);
 
-                    result = parseStringToJson(requiredOutput, eachStockNav, eachStockunits);
+                    //result = parseStringToJson(requiredOutput, eachStockNav, eachStockunits);
+                    result.put("Price", price);
+                    result.put("Change", change);
+                    result.put("PercentChange", change_percent.substring(1,6));
+                    result.put("Nav", eachStockNav);
+                    result.put("Units", "0");
 
                     Log.d("Result :: ", ""+result);
 

@@ -1,0 +1,106 @@
+{
+  "stocks": [
+    {
+      "stock_name": "AXIS",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:AXIS_LT_EQUI_1TCMI7H",
+      "deposit_nav": "~31.5",
+      "units": "200"
+    },
+    {
+      "stock_name": "UTI MNC",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:UTI_MNC_GR_14AGI2G",
+      "deposit_nav": "145.20",
+      "units": "100"
+    },
+    {
+      "stock_name": "UTI Opportunities",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:UTI_OPPO_GR_1H2GIJT",
+      "deposit_nav": "47.77",
+      "units": "100"
+    },
+    {
+      "stock_name": "Sundaram Tax Saver",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:SUND_DIVE_EQUI_1IJ0LNM",
+      "deposit_nav": "13.41",
+      "units": "100"
+    },
+    {
+      "stock_name": "Franklin India Short Term Income Plan",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:FRAN_INDI_ST_1GHG7IM",
+      "deposit_nav": "3033.45",
+      "units": "100"
+    },
+    {
+      "stock_name": "Reliance Fixed Horizon Series 15-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:RELI_FHF_XXV_TARMVO",
+      "deposit_nav": "10",
+      "units": "100"
+    },
+    {
+      "stock_name": "Reliance Capital Buider Fund II Series B-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:RELI_CAPI_BUIL_D6X6DR",
+      "deposit_nav": "10",
+      "units": "100"
+    },
+    {
+      "stock_name": "JP Morgan India Economic Resurgance Regular-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:EDEL_ECON_RESU_1QJT6QM",
+      "deposit_nav": "10",
+      "units": "100"
+    },
+    {
+      "stock_name": "HDFC Cash Management ...",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:HDFC_CASH_MGMT_A716UL",
+      "deposit_nav": "0",
+      "units": "100"
+    },
+    {
+      "stock_name": "Mahindra Kar Bachat ...",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:MAHI_MF_KAR_ZJQPCH",
+      "deposit_nav": "N.A.",
+      "units": "100"
+    },
+    {
+      "stock_name": "ICICI Pru Balanced Advantage Fund-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:ICIC_PRU_BALA_12X1JPB",
+      "deposit_nav": "30.98",
+      "units": "100"
+    },
+    {
+      "stock_name": "Franklin India Dynamic PE Ratio FoF-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:FRAN_INDI_DYN_1RSU0Z6",
+      "deposit_nav": "~74.5",
+      "units": "100"
+    },
+    {
+      "stock_name": "DSP BlackRock Focus 25-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:DSP_BLAC_FOCU_TQ91OQ",
+      "deposit_nav": "21.21",
+      "units": "100"
+    },
+    {
+      "stock_name": "Canara Robeco Medium Term Oppor-Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:CANA_ROBE_MED_1ICTFE",
+      "deposit_nav": "11.85",
+      "units": "100"
+    },
+    {
+      "stock_name": "Franklin India Taxshield Fund Growth(ELSS)",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:FRAN_INDI_TAXS_11AR13H",
+      "deposit_nav": "472.21",
+      "units": "100"
+    },
+    {
+      "stock_name": "Franklin India Ultra Short Bond- Super Institutional",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:FRAN_INDI_UST_1TMHWG3",
+      "deposit_nav": "10.08",
+      "units": "100"
+    },
+    {
+      "stock_name": "HDFC Corporate Debt Opportunities Fund Growth",
+      "api_url": "https://www.google.com/finance?q=MUTF_IN:HDFC_CORP_DEBT_1MP3SNU",
+      "deposit_nav": "13.96",
+      "units": "100"
+    }
+  ]
+}
